@@ -8,13 +8,17 @@ import { PotentialComponent } from './components/potential/potential.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AllPotentialsComponent } from './components/all-potentials/all-potentials.component';
+import { RegistrationComponent } from './components/reg/registration/registration.component';
+import { LoginComponent } from './components/reg/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PotentialComponent,
     NavbarComponent,
-    AllPotentialsComponent
+    AllPotentialsComponent,
+    RegistrationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
