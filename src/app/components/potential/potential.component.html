@@ -1,28 +1,32 @@
 <div class="component">
-    <form>
         <div class="submit-form">
-            <div>
-                <label for="CompanyName">Company Name</label>
-                <input type="text" id="CompanyName" required [(ngModel)]="new_potential.CompanyName"
-                    name="CompanyName" />
-            </div>
+            <div *ngIf="!submitted">
 
-            <div>
-                <label for="position">Position</label>
-                <input type="text" id="position" required [(ngModel)]="new_potential.position" name="position" />
-            </div>
+                <div>
+                    <label for="CompanyName">Company Name</label>
+                    <input type="text" id="CompanyName" required [(ngModel)]="new_potential.CompanyName"
+                        name="CompanyName">
+                </div>
+                <div>
+                    <label for="position">Position</label>
+                    <input type="text" id="position" required [(ngModel)]="new_potential.position" name="position">
+                </div>
 
-            <div>
-                <label for="location">Location</label>
-                <input type="text" id="location" required [(ngModel)]="new_potential.location" name="location" />
+                <div>
+                    <label for="location">Location</label>
+                    <input type="text" id="location" required [(ngModel)]="new_potential.location" name="location">
+                </div>
+                <div>
+                    <label for="website">Website</label>
+                    <input type="text" id="website" required [(ngModel)]="new_potential.website" name="website">
+                </div>
+
+                <button (click)="addNewJobPosition()">Submit</button>
             </div>
-            <div>
-                <label for="website">Website</label>
-                <input type="text" id="website" required [(ngModel)]="new_potential.website" name="website" />
+            <div *ngIf="submitted">
+                <h4>New Possible Application was submitted successfully!</h4>
+                <button>Add</button>
             </div>
 
         </div>
-
-        <button (click)="addNewJobPosition()">Submit</button>
-    </form>
 </div>
