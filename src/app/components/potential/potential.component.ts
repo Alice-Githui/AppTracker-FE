@@ -8,12 +8,6 @@ import { PotentialService } from 'src/app/services/potential/potential.service';
   styleUrls: ['./potential.component.css']
 })
 export class PotentialComponent implements OnInit {
-  
-  constructor(private potentialService:PotentialService) {  }
-
-  ngOnInit(): void {
-  }
-
   new_potential:Potential={
     id: '',
     companyName: '',
@@ -23,11 +17,17 @@ export class PotentialComponent implements OnInit {
 
   };
   submitted = false;
+  
+  constructor(private potentialService:PotentialService) {  }
+
+  ngOnInit(): void {
+  }
 
   addNewJobPosition():void{
     const data={
       companyName: this.new_potential.companyName,
       position: this.new_potential.position,
+      location:this.new_potential.location,
       website: this.new_potential.website
     };
 
