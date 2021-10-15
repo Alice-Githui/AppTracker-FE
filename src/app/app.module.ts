@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { PotentialComponent } from './components/potential/potential.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AllPotentialsComponent } from './components/all-potentials/all-potentials.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PotentialComponent,
-    NavbarComponent
+    NavbarComponent,
+    AllPotentialsComponent
   ],
   imports: [
     BrowserModule,
