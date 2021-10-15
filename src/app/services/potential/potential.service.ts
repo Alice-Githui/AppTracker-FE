@@ -14,6 +14,10 @@ export class PotentialService {
 
   constructor(private http:HttpClient) { }
 
+  getAll(): Observable<Potential[]>{
+    return this.http.get<Potential[]>(api_link)
+  }
+
   create(data:any):Observable<any>{
     return this.http.post(api_link, data);
 
