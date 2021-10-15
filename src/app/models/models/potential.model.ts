@@ -1,6 +1,6 @@
 export class Potential {
     id: any;
-    CompanyName?: string;
+    companyName?: string;
     location?:string;
     position?: string;
     website?:string    

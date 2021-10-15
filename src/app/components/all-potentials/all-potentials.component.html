@@ -5,7 +5,18 @@
         </div>
         <div class="col-md-9">
             <a routerLink="/new-potential"><button>Add New Dream Position</button></a>
-            
+            <br>
+            <br>
+            <div class="row" *ngFor="let potential of all_potentials; let i = index">
+                <div class="card" style="width: 36rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">{{potential.companyName}}</h4>
+                      <h6 class="card-subtitle mb-2 text-muted">{{potential.location}}, {{potential.position}}</h6>
+                      <p class="card-text">{{potential.website}}</p>
+                    </div>
+                </div>
+            </div>
+
             
         </div>
     </div>

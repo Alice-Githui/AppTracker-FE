@@ -16,7 +16,7 @@ export class PotentialComponent implements OnInit {
 
   new_potential:Potential={
     id: '',
-    CompanyName: '',
+    companyName: '',
     location:'',
     position:'',
     website:''
@@ -26,7 +26,7 @@ export class PotentialComponent implements OnInit {
 
   addNewJobPosition():void{
     const data={
-      companyName: this.new_potential.CompanyName,
+      companyName: this.new_potential.companyName,
       position: this.new_potential.position,
       website: this.new_potential.website
     };
